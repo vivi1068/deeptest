@@ -17,16 +17,21 @@ for c in list:
 print("-" * 5 + "列表中包含元组的遍历" + "-" * 5)
 for x,y in list_tuple:
     print(x,y)
-    #字典遍历需要将字典变为列表中包含元组，使用.items()方法
+    #字典同时遍历key和value使用.items()
 print("-"*5+"字典的遍历"+"-"*5)
-print("遍历字典方式一： ")
+print("遍历字典key和value： ")
 for d,e in dit.items():
-    #需要将字典变为列表中包含元组，使用.items()方法
     print(d,e)
-    # 先遍历keys，在关联值
-print("遍历字典方式二： ")
+    # 遍历keys，在关联值
+print("遍历字典中key和 value")
 for f in dit:
     print(f, dit[f])
+print('遍历key')
+for key in dit:
+    print(key)
+print('遍历value')
+for value in dit.values()
+    print(value)
 
 
 #range(start, end, step)以指定步长生成一个指定范围的数值序列
