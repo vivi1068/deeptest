@@ -1,0 +1,32 @@
+# 1. 在github页面上, 点击fork按钮, 将苦叶子的项目拷贝一份到vivi自己的代码仓库中.
+
+# 2. 克隆vivi自己的代码仓库到本地笔记本电脑上.
+$ git clone https://github.com/vivi1068/deeptest.git
+
+# 3. 将苦叶子的项目作为最新代码的参考标准.
+$ cd deeptest/
+$ git remote add upstream https://github.com/small99/deeptest.git
+
+# 4. 编辑代码(创建了一个目录, 编写了一个first.txt文件)
+
+# 5. 暂存已经编辑的目录和文件.
+$ git add .
+$ git stash
+
+# 6. 拉取线上最新代码
+$ git fetch upstream
+
+# 7. 将线上代码新的部分合并到vivi自己的代码仓库中, 使vivi的代码仓库变成最新的代码.
+$ git rebase upstream/master origin/master
+
+# 8. 将刚刚暂存的代码合并到现在最新的代码中.
+$ git stash apply stash@{0}
+
+# 9. 本地提交代码.
+$ git add .
+$ git commit -m "第一次提交代码"
+
+# 10. 将代码推送到vivi的github仓库.
+$ git push origin HEAD
+
+# 11. 在vivi的github仓库页面上，点击pull request向苦叶子的github仓库发起代码合并请求.

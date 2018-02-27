@@ -1,6 +1,6 @@
 #! -*- coding:utf-8 -*-
 
-# author 改为你的
+# author 爱笑的眼睛
 
 __author__ == "author"
 
