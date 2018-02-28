@@ -126,3 +126,5 @@ if __name__ == "__main__":
         print("输入对了")
     else:
         print("输入错误")
+
+        88

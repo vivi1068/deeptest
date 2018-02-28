@@ -1,0 +1,10 @@
+【2018年2月27日】
+#jmeter#
+CSV Data Set Config
+线程组每执行一次取一次参数，下一次执行取CSV里的下一行参数
+#Git#
+提交步骤:
+编辑文件
+git add . 
+git commit -m "comment" 
+git push
