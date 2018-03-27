@@ -53,25 +53,25 @@ class LYMINIParser:
     def add_section(self, section):
         if self.ini:
             self.ini.add_section(section)
-            self.ini.write(open(self.path), "w")
+            self.ini.write(open(self.path, "w"))
 
     # 设置指定option值
     def set_option(self, section, option, value):
         if self.ini:
             self.ini.set(section, option, value)
-            self.ini.write(open(self.path), "w")
+            self.ini.write(open(self.path, "w"))
 
     # 删除指定section
     def remove_section(self, section):
         if self.ini:
             self.ini.remove_section(section)
-            self.ini.write(open(self.path), "w")
+            self.ini.write(open(self.path, "w"))
 
     # 删除指定option
     def remove_option(self, section, option):
         if self.ini:
-            self.remove_option(section , option)
-            self.ini.write(open(self.path), "w")
+            self.ini.remove_option(section , option)
+            self.ini.write(open(self.path, "w"))
 
 if __name__ == "__main__":
     print("Python ini标准库解析实例")
@@ -134,5 +134,3 @@ if __name__ == "__main__":
 
     # 修改mysql port的值为4000
     ini.set_option("mysql", "port", "4000")
-
-    # 有报错
