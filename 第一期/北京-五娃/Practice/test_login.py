@@ -1,23 +1,29 @@
 # ！__author__ =='wuwa'
 # ! -*- utf-8 -*-
-import json
 import re
 
 import pytest
 import requests
 
+from common.choiceEnv import choice_env
+from common.pymysqlOpreation import pymysqlopreations
 from libarry.httprequests import requests_interface
 
 respons = requests_interface()
+baseurl = choice_env('TEST')
 
+@pytest.fixture
+def db():
+    conn = pymysqlopreations(host='xxx', port=xxx, user='xxx', password='xxx', db='xxx',
+                             link_type=1)
+    sql = " SELECT * FROM `interface_detail`"
+    resutl = conn.select_all(sql)
+    return resutl
 
 @pytest.fixture(scope='module')
 def login():
-    '''
-    获取参数所需的token/session
-    '''
-    url = "请求的url"
-    data = {"original": "2", "UserId": "xxxx"}
+    url = "http://xxxx"
+    data = {"xxx": "xxx", "xxx": "xxx"}
     headers = {'content-type': "application/json"}
     r = requests.post(url, data, headers)
     value = re.findall(r'<Cookie token=(.*?) for', str(r.cookies))[0]
@@ -26,18 +32,29 @@ def login():
 
 
 class TestClass:
-    def test_get_current_user_info(self, login):
-        url = "请求的url"
-        querystring = {"platform": "platform"}
-        headers = {'Cookie': login}
-        result = respons.http_request(interface_url=url, interface_param=querystring, headerdata=headers,
-                                 request_type='get')
-      #  print(result['data'])
-        m = json.loads(result['data'])
-      #  print("======================")
-      #  print(type(m))
-        assert m['status'] ==0
+    def test_insurance_interface(self, login,db):
+        """
+        测试接口
+        :param login:
+        :return:
+        """
+        results = db
+        print(db)
+        print("============================")
+        if len(results['data']) != 0 and results['code'] =='0000':
+            for temp_case_interface in results['data']:
+                print(temp_case_interface)
+                url_interface = baseurl + str(temp_case_interface['detail'])
+                querystring =temp_case_interface['param']
+                headers = {'Cookie': login}
+                type_interface = temp_case_interface['type_interface']
+                result = respons.http_request(interface_url=url_interface, interface_param=querystring, headerdata=headers,
+                                 request_type=type_interface)
+                print(result)
+                print("<<<<<<<<<<<<<<<<<<<<<<")
+
 
 
 if __name__ == "__main__":
-    pytest.main()
+    # ['--html=./report.html', 'test_login.py']
+    pytest.main(['--html=./report1.html', 'test_login.py'])
