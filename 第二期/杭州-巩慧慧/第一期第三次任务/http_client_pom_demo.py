@@ -7,6 +7,7 @@ import http.client
 import logging
 import unittest
 
+
 # 日志管理类
 LOGGING_FORMAT = '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s'
 class LYMLogging:
@@ -22,7 +23,7 @@ class LYMLogging:
         self.datefmt = datefmt
         self.filename = filename
         self.filemode = filemode
-        # 初始化日志同事输出到console和日志文件
+        # 初始化日志同时输出到console和日志文件
         logging.basicConfig(level=self.level,
                             format=self.format,
                             datefmt=self.datefmt,
@@ -33,7 +34,8 @@ class LYMLogging:
         console = logging.StreamHandler()
         console.setLevel(logging.INFO)
         formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
-        console.setFormatter('LYMHTTPLogger').addHandler(console)
+        console.setFormatter(formatter)
+        logging.getLogger('LYMHTTPLogger').addHandler(console)
         self.log = logging.getLogger("LYMHTTPLogger")
 
     # 日志输出
@@ -217,8 +219,6 @@ class TestSearchBookPage(unittest.TestCase):
 if __name__ == "__main__":
     print("http.client Restful API测试实例")
     unittest.main()
-
-# 有报错
 
 
 
