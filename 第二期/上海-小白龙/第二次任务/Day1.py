@@ -94,7 +94,24 @@ class Dictionarys:
         print(dic1.values())
         dic2=dic1.copy()
         print(dic2)
-        dic2.update("age",20)
+        dic3=dict.fromkeys(['age'],30)#创建一个字典,([keys],'defaultvalue')所有的key都是默认值，不设置默认值是为None
+        dic2.update(dic3)#强dic3里的key-value更新到dic2里
+        print(dic2)
+        dic2.pop('address')#删除
+        print(dic2)
+
+class Sets:
+    """set存储的元素：无序，不重复"""
+    def setFucs(self):
+        set1 =set([1,2,3])
+        print(set1)
+        set1.add('a')#add一次只能添加一个
+        set1.add('b')
+        print(set1)
+        set1.remove('b')
+        print(set1)
+        set1.update([5,6,7])#update传入一个集合
+        print(set1)
 
 
 if __name__=="__main__":
@@ -124,3 +141,7 @@ if __name__=="__main__":
     print("==========Dictionarys==========")
     dic = Dictionarys()
     dic.dicFucs()
+    print("==========Sets==========")
+    sets = Sets()
+    sets.setFucs()
+
