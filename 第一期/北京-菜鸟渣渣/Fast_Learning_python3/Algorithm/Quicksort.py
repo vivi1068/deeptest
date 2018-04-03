@@ -66,6 +66,8 @@ def quick_sort(data_list, start, end):
     # 把找到比base小的数据与base交换位置
     data_list[start], data_list[left] = data_list[left], data_list[start]
 
+
+
     # 进入下一轮排序
     quick_sort(data_list, start, left - 1)
 

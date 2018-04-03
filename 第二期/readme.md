@@ -9,9 +9,16 @@
 
 我们的github项目地址：https://github.com/small99/deeptest
 
-3. 请参见vivi笔记关于如何使用git命令操作提交任务代码：
+3. 关注公众号：
 
-https://github.com/small99/deeptest/blob/master/第一期/上海-vivi/git操作方法.txt
+![公众号](../公众号.jpg)
+
+在公众号中回复如图所示获取对于教程文章
+
+![文章](../wenzhang.png)
+
+查阅文章《如何提交自己的代码至github》
+
 
 ## 注
 

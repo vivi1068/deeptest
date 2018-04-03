@@ -5,7 +5,7 @@ import os
 # os模块所提供的目录操作方法
 
 
-
+import  time
 
 def walk_dir(target_dir):
     # root 当前根目录
@@ -24,7 +24,9 @@ def walk_dir(target_dir):
 
 
     walk_result = os.walk(target_dir)
-    print(type(walk_result))
+    for i in range(1,1000):
+
+        print(type(walk_result))
 
 
     for root, dirs, files in walk_result:

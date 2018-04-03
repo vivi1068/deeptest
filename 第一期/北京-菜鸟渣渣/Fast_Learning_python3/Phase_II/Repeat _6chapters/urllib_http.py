@@ -106,7 +106,7 @@ if __name__ == "__main__":
 '''
 # -*- coding:utf-8 -*-
 
-__author__ = '苦叶子'
+
 
 import urllib.request
 
