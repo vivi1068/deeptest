@@ -26,8 +26,8 @@ def db():
 
 @pytest.fixture(scope='module')
 def login():
-    url = "http://172.16.4.119:9000/api/user/login?platform=mp"
-    data = {"original": "2", "originalUserId": "zky_test"}
+    url = "http://xx.xx.xx:xx/api/user/login?platform=mp"
+    data = {"xxx": "xxx", "xxx": "xxx"}
     headers = {'content-type': "application/json"}
     r = requests.post(url, data, headers)
     value = re.findall(r'<Cookie token=(.*?) for', str(r.cookies))[0]
