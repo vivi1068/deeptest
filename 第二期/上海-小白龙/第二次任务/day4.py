@@ -103,6 +103,7 @@ if __name__=='__main__':
             for file in files:
                 print('文件：%s'%file)
 
+    walkFiles(u'D:/GitHub/deeptest/第二期/上海-小白龙/')
 
     def dir_tree(dir_path):
         if not os.path.isdir(dir_path):
@@ -113,7 +114,6 @@ if __name__=='__main__':
             print(fullpath)
             if os.path.isdir(fullpath):
                 dir_tree(fullpath)
-    walkFiles(u'D:/GitHub/deeptest/第二期/上海-小白龙/')
 
     print('=================================')
     a = r"D:/GitHub/deeptest/第二期/上海-小白龙/"
