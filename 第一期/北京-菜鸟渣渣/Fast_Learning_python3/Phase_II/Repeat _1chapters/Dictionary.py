@@ -88,7 +88,7 @@ if __name__ == "__main__":
 
     # items, 以元组形式返回字典所有的(key, value)
     items = dict_demo.items()
-    print(items)
+    print("----->",items)
 
     # keys 以列表形式返回字典所有的key
     keys = dict_demo.keys()

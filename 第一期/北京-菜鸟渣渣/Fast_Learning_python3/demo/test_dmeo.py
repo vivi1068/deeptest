@@ -98,6 +98,7 @@ for name, member in Month.__members__.items():
 # from enum import Enum, unique
 #
 #
+'''
 @unique
 class Weekday(Enum):  # 枚举定义用class关键字，继承Enum类
 
@@ -117,3 +118,7 @@ print(Weekday)
 #
 # ###使用元类
 # pass（不懂）
+
+
+'''
+
