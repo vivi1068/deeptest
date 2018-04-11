@@ -5,6 +5,8 @@ import datetime
 from datetime import date
 import time
 
+import json
+
 class dateTimeHander:
 
     def function(self):
@@ -32,10 +34,22 @@ class dateTimeHander:
         print(str)
 
 class jsonParer:
-    pass
-
+    def func1(self):
+        json_str = '{"name": "开源优测", "url": "www.testingunion.com", "id": "DeepTest"}'
+        print(u'原类型：',type(json_str))
+        #json转换成字典
+        json_dict = json.loads(json_str)
+        print(u'转后后：',type(json_dict))
+        #遍历dictionary
+        for (key,value)in json_dict.items():
+            print(key,":",value)
+    def func2(self):
+        pass
 
 if __name__=='__main__':
     dt = dateTimeHander()
     dt.function()
     dt.formatTime()
+
+    jp = jsonParer()
+    jp.func1()
