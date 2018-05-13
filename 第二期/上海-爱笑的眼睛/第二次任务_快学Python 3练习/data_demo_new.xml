@@ -1,0 +1,19 @@
+<data>
+    <country name="Liechtenstein">
+        <rank updated="yes">开源优测</rank>
+        <gdppc>141100</gdppc>
+        <neighbor direction="E" name="Austria" />
+        <neighbor direction="W" name="Switzerland" />
+    <url>www.testingunion.com</url></country>
+    <country name="Singapore">
+        <rank updated="yes">开源优测</rank>
+        <gdppc>59900</gdppc>
+        <neighbor direction="N" name="Malaysia" />
+    <url>www.testingunion.com</url></country>
+    <country name="Panama">
+        <rank updated="yes">开源优测</rank>
+        <gdppc>13600</gdppc>
+        <neighbor direction="W" name="Costa Rica" />
+        <neighbor direction="E" name="Colombia" />
+    <url>www.testingunion.com</url></country>
+</data>
